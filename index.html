@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TechLight - Tech Blog Free HTML CSS Website Template</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">		
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  	<symbol id="person" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Login</title><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6ZM432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480Z"/>
+  	</symbol>
+  	<symbol id="long-arrow-alt-left" xmlns="http://www.w3.org/2000/svg" class="la" viewBox="0 0 32 32">
+        <title>Long Arrow Left</title><path fill="currentColor" d="M10.813 9.281L4.093 16l6.72 6.719l1.406-1.438L7.938 17H28v-2H7.937l4.282-4.281z"/>
+    </symbol>
+    <symbol id="long-arrow-alt-right" xmlns="http://www.w3.org/2000/svg" class="la" viewBox="0 0 32 32">
+    	<title>Long Arrow Right</title><path fill="currentColor" d="M21.188 9.281L19.78 10.72L24.063 15H4v2h20.063l-4.282 4.281l1.407 1.438L27.905 16z"/>
+    </symbol>
+  	<symbol id="caret-down" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Caret Down</title><path fill="currentColor" d="m98 190.06l139.78 163.12a24 24 0 0 0 36.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62Z"/>
+  	</symbol>
+  	<symbol id="arrow-back" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Arrow Back</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/>
+  	</symbol>
+  	<symbol id="arrow-forward" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Arrow Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m268 112l144 144l-144 144m124-144H100"/>
+  	</symbol>
+  	<symbol id="chevron-forward" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m184 112l144 144l-144 144"/>
+  	</symbol>
+  	<symbol id="play" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Play</title><path fill="currentColor" d="M133 440a35.37 35.37 0 0 1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37 7.46-27.53 19.46-34.33a35.13 35.13 0 0 1 35.77.45l247.85 148.36a36 36 0 0 1 0 61l-247.89 148.4A35.5 35.5 0 0 1 133 440Z"/>
+  	</symbol>
+  	<symbol id="menu-sharp" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Menu</title><path fill="currentColor" d="M64 384h384v-42.67H64Zm0-106.67h384v-42.66H64ZM64 128v42.67h384V128Z"/>
+  	</symbol>
+  	<symbol id="close-sharp" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Cross</title><path fill="currentColor" d="M400 145.49L366.51 112L256 222.51L145.49 112L112 145.49L222.51 256L112 366.51L145.49 400L256 289.49L366.51 400L400 366.51L289.49 256L400 145.49z"/>
+  	</symbol>
+</svg>
+
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+
+<header id="header-wrap">
+	<nav id="header-nav" class="navbar navbar-expand-lg py-4">
+
+		<div class="container align-items-center">
+
+			<a class="navbar-brand" href="index.html">
+				<img src="images/logo.png" class="logo">
+			</a>
+			<button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+		    	<svg class="bi" width="36" height="36"><use xlink:href="#menu-sharp"></use></svg>
+		 	</button>
+
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+				<div class="offcanvas-header justify-content-end">
+	              <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar">
+	              	<svg class="bi" width="36" height="36"><use xlink:href="#close-sharp"></use></svg>
+	              </button>
+	            </div>
+				<div class="offcanvas-body justify-content-end">
+					<ul id="navbar" class="navbar-nav d-flex justify-content-end flex-wrap list-unstyled m-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="blog.html">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">About</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact</a>
+						</li>
+
+						<li class="nav-item">
+		                  <div class="user-items">
+		                    <ul class="d-flex justify-content-end list-unstyled m-0">
+		                      <li>
+		                        <a href="login.html">
+		                          <svg class="bi" width="20" height="20"><use xlink:href="#person"></use></svg>
+		                        </a>
+		                      </li>
+		                    </ul>
+		                  </div>
+		                </li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</nav>	
+</header>
+
+<section id="slider" class="position-relative padding-xlarge no-padding-top">
+
+	<div class="container">
+
+		<div class="swiper main-slider overflow-hidden">
+		    <div class="swiper-wrapper">
+
+		        <div class="swiper-slide">
+					<img src="images/slider-img1.jpg" class="slider-img img-fluid">
+				  	<div class="carousel-text text-start">
+				        <div class="story-title-wrap mt-3">
+							<div class="post-meta"><a href="blog.html">Fashion</a></div>
+							<h2 class="story-title"><a href="single-post.html">The most powerful small sized robots in the world</a></h2>				
+							<p>How did the hand pies look? Did you love the brownies? How many choux did you eat in one sitting? After  a gorgeous selection of our favorites for a client to send as a new year’s gift.</p>
+							<div class="entry-meta">
+								<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
+								<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
+							</div>
+						</div>
+				    </div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="images/slider-img2.jpg" class="slider-img img-fluid">
+				  	<div class="carousel-text text-start">
+				        <div class="story-title-wrap mt-3">
+							<div class="post-meta"><a href="blog.html">Fashion</a></div>
+							<h2 class="story-title"><a href="single-post.html">The most powerful small sized robots in the world</a></h2>				
+							<p>How did the hand pies look? Did you love the brownies? How many choux did you eat in one sitting? After  a gorgeous selection of our favorites for a client to send as a new year’s gift.</p>
+							<div class="entry-meta">
+								<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
+								<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
+							</div>
+						</div>
+				    </div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="images/slider-img3.jpg" class="slider-img img-fluid">
+				  	<div class="carousel-text text-start">
+				        <div class="story-title-wrap mt-3">
+							<div class="post-meta"><a href="blog.html">Fashion</a></div>
+							<h2 class="story-title"><a href="single-post.html">The most powerful small sized robots in the world</a></h2>				
+							<p>How did the hand pies look? Did you love the brownies? How many choux did you eat in one sitting? After  a gorgeous selection of our favorites for a client to send as a new year’s gift.</p>
+							<div class="entry-meta">
+								<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
+								<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
+							</div>
+						</div>
+				    </div>
+				</div>
+		    </div>
+		</div>
+	    <div class="swiper-icon swiper-arrow slider-arrow-next position-absolute top-0 bottom-0 end-0 d-flex align-items-center">
+          <a href="#"><svg class="bi" width="60" height="60"><use xlink:href="#long-arrow-alt-right"></use></svg></a>
+        </div>
+	    <div class="swiper-icon swiper-arrow slider-arrow-prev position-absolute top-0 bottom-0 start-0 d-flex align-items-center">
+          <a href="#"><svg class="bi" width="60" height="60"><use xlink:href="#long-arrow-alt-left"></use></svg></a>
+        </div>
+        <div class="swiper-pagination main-slider-pagination"></div>
+
+	</div>
+</section>
+
+<section id="latest-posts" class="latest-posts margin-large">
+	<div class="container">
+		<div class="title-wrap d-flex justify-content-between">			
+			<div class="section-header">
+				<h4 class="elementary-title">Latest Posts</h4>
+			</div><!--section-header-->
+			<a href="blog.html" class="button">All news<svg class="bi" width="18" height="18"><use xlink:href="#chevron-forward"></use></svg></a>
+		</div>
+		<div class="row">
+			<div class="post-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="single-post.html" class="zoom-in"><img src="images/item1.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">Fashion</a></div>
+					<h3 class="story-title"><a href="single-post.html">10 Distinctive Features of the iPhone and iPod Touch</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
+					</div>
+				</div>
+			</div>
+			<div class="post-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="single-post.html" class="zoom-in"><img src="images/item2.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">Fashion</a></div>
+					<h3 class="story-title"><a href="single-post.html">10 Things That Make the iPhone and iPod touch different</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
+					</div>
+				</div>
+			</div>
+			<div class="post-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="single-post.html" class="zoom-in"><img src="images/item3.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">Fashion</a></div>
+					<h3 class="story-title"><a href="single-post.html">10 Things That Make the iPhone and iPod touch different</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer id="footer" class="padding-large">
+	<div class="container">
+	    <div class="row">
+
+	      <div class="col-md-3 mb-5">
+			<a href="index.html"><img src="images/logo-light.png" class="logo"></a>
+			<p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
+		    <p>©2023 TechLight / HTML template by <a href="https://templatesjungle.com/" class="link-primary fw-bold text-decoration-underline" target="_blank">TemplatesJungle</a></p>
+	      </div>
+
+	      <div class="col-md-3 mb-5">
+	        <h5>More from us</h5>
+	        <p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
+	      </div>
+
+	      <div class="col-md-3 mb-5">
+	        <h5>About us</h5>
+	        <p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
+	      </div>
+
+	      <div class="col-md-3 mb-5">
+	        <h5>Policies</h5>
+	        <p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
+	      </div>
+
+	    </div>
+	</div>
+</footer>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
