@@ -9,7 +9,7 @@
             document.documentElement.classList.add('carbon');
         }
     </script>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
 <body>
     <div class="app-container">
@@ -31,8 +31,8 @@
                     </p>
 
                     <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
-                        <a href="login.html" class="btn">Prejsť na Login</a>
-                        <a href="index.html" class="btn btn-ghost">Späť na Web</a>
+                        <a href="login.php" class="btn">Prejsť na Login</a>
+                        <a href="home.php" class="btn btn-ghost">Späť na Web</a>
                     </div>
                 </div>
             </div>
@@ -43,6 +43,6 @@
         </footer>
     </div>
 
-    <script src="js/admin.js"></script>
+    <script src="../assets/js/admin.js"></script>
 </body>
 </html>

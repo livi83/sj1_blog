@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TechLight - Tech Blog Free HTML CSS Website Template</title>
+	<title>TechBlog</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +12,15 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <link rel="stylesheet" type="text/css" href="css/vendor.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendor.css">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">		
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   	<symbol id="person" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
 		<title>Login</title><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6ZM432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480Z"/>
@@ -64,8 +63,8 @@
 
 		<div class="container align-items-center">
 
-			<a class="navbar-brand" href="index.html">
-				<img src="images/logo.png" class="logo">
+			<a class="navbar-brand" href="home.php">
+				<img src="../assets/images/logo.png" class="logo">
 			</a>
 			<button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
 		    	<svg class="bi" width="36" height="36"><use xlink:href="#menu-sharp"></use></svg>
@@ -80,24 +79,24 @@
 				<div class="offcanvas-body justify-content-end">
 					<ul id="navbar" class="navbar-nav d-flex justify-content-end flex-wrap list-unstyled m-0">
 						<li class="nav-item">
-							<a class="nav-link" href="index.html">Home</a>
+							<a class="nav-link" href="home.php">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="blog.html">Blog</a>
+							<a class="nav-link" href="blog.php">Blog</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
+							<a class="nav-link" href="about.php">About</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact</a>
+							<a class="nav-link" href="contact.php">Contact</a>
 						</li>
 
 						<li class="nav-item">
 		                  <div class="user-items">
 		                    <ul class="d-flex justify-content-end list-unstyled m-0">
 		                      <li>
-		                        <a href="login.html">
+		                        <a href="login.php">
 		                          <svg class="bi" width="20" height="20"><use xlink:href="#person"></use></svg>
 		                        </a>
 		                      </li>
@@ -112,118 +111,3 @@
 
 	</nav>	
 </header>
-
-
-<section id="intro" class="bg-light padding-large">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-				
-				<div class="page-title text-center">
-					<h2>Blog</h2>
-					<div class="breadcum-items">
-						<span class="item"><a href="index.html">Home /</a></span>
-						<span class="item colored">Blog</span>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="blog-section" class="bg-light padding-large">
-	<div class="container">
-		<div class="row">
-			<div class="post-item col-md-3">
-				<figure class="zoom-effect">
-					<a href="single-post.html" class="zoom-in"><img src="images/postitem1.jpg" alt="stories" class="lgpostImg img-fluid"></a>
-				</figure>
-				<div class="story-title-wrap mt-3">
-					<div class="post-meta"><a href="blog.html">Fashion</a></div>
-					<h3 class="story-title"><a href="single-post.html">10 Things That Make the iPhone and iPod</a></h3>				
-					<div class="entry-meta">
-						<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
-						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
-					</div>
-				</div>
-			</div>
-			<div class="post-item col-md-3">
-				<figure class="zoom-effect">
-					<a href="single-post.html" class="zoom-in"><img src="images/postitem2.jpg" alt="stories" class="lgpostImg img-fluid"></a>
-				</figure>
-				<div class="story-title-wrap mt-3">
-					<div class="post-meta"><a href="blog.html">Fashion</a></div>
-					<h3 class="story-title"><a href="single-post.html">10 Things That Make the iPhone and iPod</a></h3>				
-					<div class="entry-meta">
-						<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
-						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
-					</div>
-				</div>
-			</div>
-			<div class="post-item col-md-3">
-				<figure class="zoom-effect">
-					<a href="single-post.html" class="zoom-in"><img src="images/postitem3.jpg" alt="stories" class="lgpostImg img-fluid"></a>
-				</figure>
-				<div class="story-title-wrap mt-3">
-					<div class="post-meta"><a href="blog.html">Fashion</a></div>
-					<h3 class="story-title"><a href="single-post.html">10 Things That Make the iPhone and iPod</a></h3>				
-					<div class="entry-meta">
-						<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
-						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
-					</div>
-				</div>
-			</div>
-			<div class="post-item col-md-3">
-				<figure class="zoom-effect">
-					<a href="single-post.html" class="zoom-in"><img src="images/postitem4.jpg" alt="stories" class="lgpostImg img-fluid"></a>
-				</figure>
-				<div class="story-title-wrap mt-3">
-					<div class="post-meta"><a href="blog.html">Fashion</a></div>
-					<h3 class="story-title"><a href="single-post.html">10 Things That Make the iPhone and iPod</a></h3>				
-					<div class="entry-meta">
-						<span class="author"><span class="sp">by</span><span class="author-name">Jenny Matt</span></span>
-						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">Feb 12, 2022</time></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<footer id="footer" class="padding-large">
-	<div class="container">
-	    <div class="row">
-
-	      <div class="col-md-3 mb-5">
-			<a href="index.html"><img src="images/logo-light.png" class="logo"></a>
-			<p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
-		    <p>©2023 TechLight / HTML template by <a href="https://templatesjungle.com/" class="link-primary fw-bold text-decoration-underline" target="_blank">TemplatesJungle</a></p>
-	      </div>
-
-	      <div class="col-md-3 mb-5">
-	        <h5>More from us</h5>
-	        <p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
-	      </div>
-
-	      <div class="col-md-3 mb-5">
-	        <h5>About us</h5>
-	        <p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
-	      </div>
-
-	      <div class="col-md-3 mb-5">
-	        <h5>Policies</h5>
-	        <p>Vel non nibh vestibulum massa ullamcorper. Bibendum ultrices venenatis, id id sed mass commodo eros duis ut cras neque.</p>
-	      </div>
-
-	    </div>
-	</div>
-</footer>
-
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
-
-</body>
-</html>
