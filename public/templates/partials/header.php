@@ -1,7 +1,11 @@
+<?php
+	require '../../app/functions.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TechBlog</title>
+	<title><?php echo getTitle(); ?></title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
