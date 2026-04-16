@@ -1,11 +1,15 @@
 <?php
-	require '../../app/functions.php';
+	require '../../app/core/Helper.php';
+	require '../../app/models/Contact.php';
+	require '../../app/core/Database.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo getTitle(); ?></title>
+	<title><?php 
+		echo Helper::getPageTitle();
+	?></title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

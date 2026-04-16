@@ -1,3 +1,8 @@
+<?php
+require '../../app/core/Database.php';
+require '../../app/models/Category.php';
+?>
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
