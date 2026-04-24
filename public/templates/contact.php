@@ -70,14 +70,22 @@ include 'partials/header.php';
 							</div>
 						</div>
 					</form>
+
           <?php
-             if($_SERVER['REQUEST_METHOD']==='POST'){
-                  $db = new Database();
-                  $connection = $db->getConnection();
-                  $contact = new Contact($connection, $_POST);
-                  $contact->store();
-             }
+          if($_SERVER['REQUEST_METHOD']==='POST'){
+
+            $db = new Database();
+            $connection = $db->getConnection();
+
+            $contact = new Contact($connection,$_POST);
+
+            if($contact->store()){
+                echo 'Formulár bol odoslaný';
+            }
+          }
+            
           ?>
+
 				</div><!--contact-information-->
 
 			</div><!--col-md-6-->

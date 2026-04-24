@@ -1,17 +1,9 @@
 <?php
+class Redirect{
 
-class Redirect
-{
-    private string $url;
-
-    public function __construct(string $url)
-    {
-        $this->url = $url;
-    }
-
-    public function redirect(): void
-    {
-        header('Location: ' . $this->url);
-        exit;
+    public static function redirect(string $url):void{
+        header('Location: '.$url);
     }
 }
+
+?>

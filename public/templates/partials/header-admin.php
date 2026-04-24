@@ -1,8 +1,6 @@
 <?php
-require '../../app/core/Database.php';
-require '../../app/models/Category.php';
+	require_once('../../app/core/Helper.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="sk">
 <head>

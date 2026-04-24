@@ -1,15 +1,19 @@
 <?php
-	require '../../app/core/Helper.php';
-	require '../../app/models/Contact.php';
-	require '../../app/core/Database.php';
+	require_once '../../app/core/App.php';
+	App::init();
 ?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php 
-		echo Helper::getPageTitle();
-	?></title>
+	<title>
+		<?php
+		// helper = new Helper();
+		// helper->getPageTitle();
+			echo Helper::getPageTitle();
+		?>
+	</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
