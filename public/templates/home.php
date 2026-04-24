@@ -2,7 +2,11 @@
 require_once '../../app/core/App.php';
 App::init();
 
+$post = new Post();
+$posts = $post->all(); // vsetko
 
+// Orezanie: začne od indexu 0 a vezme 3 prvky
+$latestPosts = array_slice($posts, 0, 3);
 
 include_once 'partials/header.php';
 ?>
@@ -77,7 +81,60 @@ include_once 'partials/header.php';
 			<a href="blog.php" class="button">All news<svg class="bi" width="18" height="18"><use xlink:href="#chevron-forward"></use></svg></a>
 		</div>
 
-		
+		<div class="row">
+			<?php if (!empty($latestPosts)): ?>
+				<?php foreach ($latestPosts as $p): ?>
+					<?php
+						$imagePath = '../assets/images/item1.jpg';
+
+						if (!empty($p->image)) {
+							if (file_exists(__DIR__ . '/../uploads/' . $p->image)) {
+								$imagePath = '../uploads/' . $p->image;
+							} else {
+								$imagePath = '../assets/images/' . $p->image;
+							}
+						}
+					?>
+
+					<div class="post-item col-md-4">
+						<figure class="zoom-effect">
+							<a href="single-post.php?id=<?php echo htmlspecialchars($p->id); ?>" class="zoom-in">
+								<img src="<?php echo htmlspecialchars($imagePath); ?>" alt="stories" class="blogImg img-fluid">
+							</a>
+						</figure>
+
+						<div class="story-title-wrap mt-3">
+
+							<h3 class="story-title">
+								<a href="single-post.php?id=<?php echo htmlspecialchars($p->id); ?>">
+									<?php echo htmlspecialchars($p->title); ?>
+								</a>
+							</h3>
+
+							<div class="entry-meta">
+								<span class="author">
+									<span class="sp">by</span>
+									<span class="author-name">
+										<?php echo htmlspecialchars($p->author_name ?? 'Unknown Author'); ?>
+									</span>
+								</span>
+
+								<span class="meta-date">
+									<span class="sp">-</span>
+									<time class="published" datetime="<?php echo htmlspecialchars($p->created_at ?? ''); ?>">
+										<?php echo !empty($p->created_at) ? date('M d, Y', strtotime($p->created_at)) : 'No date'; ?>
+									</time>
+								</span>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			<?php else: ?>
+				<div class="col-12">
+					<p>Žiadne články neboli nájdené.</p>
+				</div>
+			<?php endif; ?>
+		</div>
 	</div>
 </section>
 

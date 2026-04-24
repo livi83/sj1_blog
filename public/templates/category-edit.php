@@ -10,7 +10,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 //ak neexistuje id alebo je 0
 if (!$id) {
-    header('Location: admin.php');
+    Redirect::redirect('admin.php');
     exit;
 }
 
@@ -19,7 +19,7 @@ $cat = $category->find($id);
 
 //ak nic nenaslo
 if (!$cat) {
-    header('Location: admin.php');
+    Redirect::redirect('admin.php');
     exit;
 }
 
@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($id && $name && $slug) {
         $category->update($id, $name, $slug, $description);
 
-        header('Location: admin.php');
-        exit;
+        Redirect::redirect('admin.php');
+    exit;
     }
 }
 

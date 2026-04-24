@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $category->create($name, $slug, $description);
 
         // redirect po uložení (aby sa neodosielal formulár znova)
-        header('Location: admin.php');
+        Redirect::redirect('admin.php');
         exit;
     }
 }
