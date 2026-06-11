@@ -2,6 +2,8 @@
 
 require_once '../../app/core/App.php';
 App::init();
+Auth::requireLogin();
+
 // vytvorenie objektu
 $category = new Category();
 

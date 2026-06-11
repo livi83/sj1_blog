@@ -2,6 +2,7 @@
 
 require_once '../../app/core/App.php';
 App::init();
+Auth::requireLogin();
 
 $category = new Category();
 

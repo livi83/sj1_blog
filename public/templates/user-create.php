@@ -2,6 +2,13 @@
 require_once '../../app/core/App.php';
 App::init();
 
+Auth::requireLogin();
+
+if (!Auth::isAdmin()) {
+    http_response_code(403);
+    exit('Nemáte oprávnenie.');
+}
+
 $user = new User();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

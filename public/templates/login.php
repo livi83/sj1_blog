@@ -1,21 +1,42 @@
+<?php
+require_once '../../app/core/App.php';
+App::init();
+
+$error = null;
+
+if (Auth::check()) {
+    Redirect::redirect('admin.php');
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = trim($_POST['email'] ?? '');
+    $password = $_POST['password'] ?? '';
+
+    if (Auth::login($email, $password)) {
+        Redirect::redirect('admin.php');
+    }
+
+    $error = 'Nesprávny email alebo heslo.';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - DayNight Admin</title>
-    <script>if(localStorage.getItem("daynight-theme")==="carbon"){document.documentElement.classList.add("carbon");}</script>
+
+    <script>
+        if (localStorage.getItem("daynight-theme") === "carbon") {
+            document.documentElement.classList.add("carbon");
+        }
+    </script>
+
     <link rel="stylesheet" href="../assets/css/admin.css">
-    <!--
-
-TemplateMo 608 DayNight Admin
-
-https://templatemo.com/tm-608-daynight-admin
-
--->
 </head>
+
 <body>
-    <!-- Theme Toggle (Fixed Position) -->
     <div class="login-theme-toggle">
         <div class="theme-toggle">
             <button class="theme-btn theme-btn-snow active" onclick="setTheme('snow')" title="Snow Edition">
@@ -31,6 +52,7 @@ https://templatemo.com/tm-608-daynight-admin
                     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
                 </svg>
             </button>
+
             <button class="theme-btn theme-btn-carbon" onclick="setTheme('carbon')" title="Carbon Edition">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -39,7 +61,6 @@ https://templatemo.com/tm-608-daynight-admin
         </div>
     </div>
 
-    <!-- Login Page -->
     <div class="login-page">
         <div class="login-container">
             <div class="login-card">
@@ -52,34 +73,63 @@ https://templatemo.com/tm-608-daynight-admin
                         </div>
                         <span>DayNight</span>
                     </div>
+
                     <h1 class="login-title">Welcome back</h1>
                     <p class="login-subtitle">Sign in to your account to continue</p>
                 </div>
 
-                <form class="login-form">
+                <form class="login-form" method="post">
                     <div class="form-group">
-                        <label class="form-label">Email Address</label>
-                        <input type="email" class="form-input" placeholder="you@example.com">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-input"
+                            placeholder="you@example.com"
+                            value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
+                            required
+                        >
                     </div>
-                    
+
                     <div class="form-group">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                            <label class="form-label" style="margin-bottom: 0;">Password</label>
+                            <label class="form-label" for="password" style="margin-bottom: 0;">Password</label>
                             <a href="#" style="font-size: 0.8125rem; color: var(--accent);">Forgot password?</a>
                         </div>
-                        <input type="password" class="form-input" placeholder="Enter your password">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-input"
+                            placeholder="Enter your password"
+                            value="<?= htmlspecialchars($_POST['password'] ?? '') ?>"
+                            required
+                        >
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); window.location.href='home.php';">
+
+                    <?php if ($error): ?>
+                        <p style="color: #dc2626; font-size: 0.875rem; margin-bottom: 1rem;">
+                            <?= htmlspecialchars($error) ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <button type="submit" class="btn btn-primary">
                         Sign In
                     </button>
                 </form>
+
                 <p class="login-footer">
                     Don't have an account? <a href="#">Sign up for free</a>
                 </p>
             </div>
 
             <p style="text-align: center; margin-top: 1.5rem; font-size: 0.8125rem; color: var(--text-secondary);">
-                &copy; 2026 DayNight Admin. Designed by <a href="https://www.templatemo.com" target="_blank" rel="nofollow" style="color: var(--accent);">TemplateMo</a>
+                &copy; 2026 DayNight Admin. Designed by
+                <a href="https://www.templatemo.com" target="_blank" rel="nofollow" style="color: var(--accent);">
+                    TemplateMo
+                </a>
             </p>
         </div>
     </div>

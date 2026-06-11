@@ -2,6 +2,11 @@
 require_once '../../app/core/App.php';
 App::init();
 
+if (!Auth::isAdmin()) {
+    http_response_code(403);
+    exit('Nemáte oprávnenie.');
+}
+
 $user = new User();
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;

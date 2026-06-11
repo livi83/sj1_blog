@@ -2,6 +2,7 @@
 
 require_once '../../app/core/App.php';
 App::init();
+Auth::requireLogin();
 
 $post = new Post();
 $category = new Category();
@@ -16,14 +17,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = $_POST['content'] ?? '';
     $image = $_POST['image'] ?? 'item1.jpg';
     $status = $_POST['status'] ?? 'draft';
-    $user_id = isset($_POST['user_id']) ? (int)$_POST['user_id'] : 0;
     $published_at = $_POST['published_at'] ?? null;
     $categoryIds = $_POST['category_ids'] ?? [];
 
     if ($published_at === '') {
         $published_at = null;
     }
-
+    $user_id = Auth::id();
+    
     // jednoduchá validácia
     if ($title && $slug && $content && $user_id) {
         //tu bude validacia obrazka

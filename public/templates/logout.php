@@ -1,3 +1,15 @@
+<?php
+    require_once '../../app/core/App.php';
+    App::init();
+
+    // reálne odhlásenie
+    Auth::logout();
+
+    // presmerovanie (najčistejšie riešenie)
+    Redirect::redirect('login.php');
+    exit;
+?>
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
